@@ -1,0 +1,178 @@
+.badan{
+	width: 100%;
+	height: 100%;
+	margin: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.badan .sidebar{
+	width: 20%;
+	height: 100%;
+	float: left;
+	margin: 10px;
+	padding: 20px;
+	border: 1px solid;
+	border-radius: 10px;
+}
+
+.badan .content{
+	width: 75%;
+	height: 100%;
+	float: left;
+	margin: 10px;
+	padding: 10px;
+	border: 1px solid;
+	border-radius: 10px;
+}
+
+.badan .content .topcontent{
+	width: 100%;
+/*	height: 325px;*/
+}
+.badan .content .content1{
+	width: 45%;
+	height: auto;
+	float: left;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+
+.container .top{
+	height: auto;
+	width: 70%;
+}
+
+.bottom{
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+}
+
+.bottom .bottom1{
+	width: 25%;
+	height: auto;
+	float: left;
+	margin-right: 10px;
+	border: 1px solid;
+	border-radius: 10px;
+}
+.bottom .bottom2{
+	width: 48%;
+	height: auto;
+	float: left;
+	border: 1px solid;
+	border-radius: 10px;
+
+}
+.bottom .bottom3{
+	width: 25%;
+	height: auto;
+	float: left;
+	margin-left: 10px;
+	border: 1px solid;
+	border-radius: 10px;
+}
+
+input[type=text],select{
+	width: 100%;
+	padding: 5px 5px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 50%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 7px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.footer {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	width: 100%;
+	background: black;
+	text-align:center;
+}
+
+.image{
+	width: 100px;
+	height: auto;
+}
+
+.badan .content .tabel{
+	width: 100%;
+}
+
+.badan .content .tabel thead tr th{
+	width: 50%;
+}
+
+.badan .content .tabel tbody tr td{
+	text-align: justify;
+	padding-right: 10px;
+	width: 50%;
+}
+
+.container .beranda{
+	width: 100%;
+	/*background: red;*/
+	margin: 10px;
+	padding: 10px;
+/*	margin-bottom: 10px;*/
+	display: inline-block;
+	border: 1px solid;
+	border-radius: 10px;
+
+}
+
+.badan .content .detailcontent{
+	width: 100%;
+	padding-right: 5px;
+	display: inline-block;
+	text-align: justify;
+}
+
+.tabel2{
+	width: 100%;
+	background: red;
+	border: 1px solid;
+}
+
+@media only screen and (max-width: 800px) {
+    /* For mobile phones: */
+    .badan .sidebar{
+	width: 95%;
+	padding-right: 20px; 
+}
+
+.badan .content{
+	width: 95%;
+}
+
+.badan .content .content1{
+	width: 95%;
+}
+
+.bottom .bottom1, .bottom .bottom2, .bottom .bottom3{
+	width: 95%;
+	display: inline-block;
+	margin-left:10px;
+	margin-bottom: 10px;
+}
+
+    
+}
