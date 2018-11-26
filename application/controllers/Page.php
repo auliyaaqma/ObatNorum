@@ -23,6 +23,12 @@ class Page extends CI_Controller
 		$this->load->view('v_template', $data);
 	}
 
+	function Detail()
+	{
+		$data['content_view']="v_detail_obat.php";
+		$this->load->view('v_template', $data);
+	}
+
 	function NamaObatMirip()
 	{
 		$data['content_view']="v_nama_obat_mirip.php";
