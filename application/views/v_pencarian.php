@@ -1,14 +1,14 @@
 <div id="search">
-<form action="<?php echo base_url().'index.php/Page/Search'?>" method="post" >
+<!-- <form action="<?php echo base_url().'index.php/Page/Search'?>" method="post" > -->
 	<input type="text" name="keyword" placeholder="Search.."/>
 <!-- 	<input type="submit" value="Search"/> -->
-</form>
+<!-- </form> -->
 </div>
 <div class="container">
+<h3>Pencarian Obat</h3>
 		<table class="table table-hover table-dark">
-		  <thead>
+		  <thead >
 		    <tr>
-		      <th scope="col">No</th>
 		      <th scope="col">Nama Obat</th>
 		      <th scope="col">Golongan</th>
 		      <th scope="col">Kategori</th>
@@ -17,16 +17,54 @@
 		    </tr>
 		  </thead>
 		  <tbody>
+		  <?php
+				foreach($list_obat as $row) 
+				{
+			?>
 		    <tr>
-		      <th scope="row">1</th>
-		      <td>Actapin</td>
-		      <td>Red</td>
-		      <td>Hipertensi</td>
-		      <td>Tablet</td>
+		      <td><?php echo $row['nama_obat'];?></td>
 		      <td>
-		      	<a class="btn btn-primary" href="<?php echo base_url().'index.php/Page/Detail'?>">View Detail</a>
+			      <?php
+							foreach($list_golongan as $golongan) 
+							{
+								if($row['kode_golongan'] == $golongan['kode_golongan'])
+								{
+						 			echo $golongan['nama_golongan'];
+			      		}
+			      	}
+			      ?>
+		      </td>
+		      <td>
+			      <?php
+							foreach($list_kategori as $kategori) 
+							{
+								if($row['kode_kategori'] == $kategori['kode_kategori'])
+								{
+						 			echo $kategori['nama_kategori'];
+			      		}
+			      	}
+			      ?>
+		      </td>
+
+		      <td>
+			      <?php
+							foreach($list_bentuksediaan as $bentuksediaan) 
+							{
+								if($row['kode_bentuksediaan'] == $bentuksediaan['kode_bentuksediaan'])
+								{
+						 			echo $bentuksediaan['nama_bentuksediaan'];
+			      		}
+			      	}
+			      ?>
+		      </td>
+
+		      <td>
+		      	<a class="btn btn-primary" href="<?php echo base_url().'index.php/Page/Detail/'.$row['kode_obat']?>">View Detail</a>
 		      </td>
 		    </tr>
+		  <?php
+		  	}
+		  ?>
 		  </tbody>
 		</table>	
 </div>

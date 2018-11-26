@@ -11,7 +11,8 @@
 	float: left;
 	margin: 10px;
 	padding: 20px;
-	border: 1px solid;
+	background: #D3D3D3;
+/*	border: 1px solid;*/
 	border-radius: 10px;
 }
 
@@ -100,6 +101,10 @@ input[type=submit]:hover {
     background-color: #45a049;
 }
 
+.headtable {
+	text-align: center;
+}
+
 .footer {
 	padding-top: 20px;
 	padding-bottom: 20px;
@@ -108,8 +113,8 @@ input[type=submit]:hover {
 	text-align:center;
 }
 
-.image{
-	width: 100px;
+.icon{
+	width: 20px;
 	height: auto;
 }
 
@@ -144,6 +149,7 @@ input[type=submit]:hover {
 	padding-right: 5px;
 	display: inline-block;
 	text-align: justify;
+	margin-bottom: 10px;
 }
 
 .tabel2{
@@ -157,6 +163,10 @@ input[type=submit]:hover {
 	width: 20%;
 	margin-right: 20px;
 
+}
+
+p{
+	text-align: justify;
 }
 
 @media only screen and (max-width: 800px) {

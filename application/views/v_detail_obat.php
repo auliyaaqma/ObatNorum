@@ -1,7 +1,7 @@
 <div class="badan">
 	
 	<div class="sidebar">
-	<h3>Form Pencarian Obat</h3><br>
+	<!-- <h3>Form Pencarian Obat</h3><br>
 		<form action="#" method="post">
 			<label for="fnama">Nama Obat</label>
 			<input type="text" id="fnama" name="nama" placeholder="Masukkan Nama Obat">
@@ -20,61 +20,141 @@
 				<option>Solid</option>
 			</select>
 			<input type="submit" name="submit" value="Cari">
-		</form>
+		</form> -->
+		 <table class="table table-striped obat">
+			<tr>
+				<th>Nama Obat</th>
+			</tr>
+			<tr>
+				<td><?php echo $row_data->nama_obat;?></td>
+			</tr>
+			<tr>
+				<th>Golongan</th>
+			</tr>
+			<tr>
+				<td>
+					<?php
+						foreach ($list_golongan as $golongan) {
+						 	if($row_data->kode_golongan == $golongan['kode_golongan']){
+								echo $golongan['nama_golongan'];
+						 	}
+						 } 
+					?>
+				</td>
+			</tr>
+			<tr>
+				<th>Kategori</th>
+			</tr>
+			<tr>
+				<td>
+					<?php
+						foreach ($list_kategori as $kategori) {
+						 	if($row_data->kode_kategori == $kategori['kode_kategori']){
+								echo $kategori['nama_kategori'];
+						 	}
+						 } 
+					?>
+				</td>
+			</tr>
+			<tr>
+				<th>Bentuk Sediaan</th>
+			</tr>
+			<tr>
+				<td>
+					<?php
+						foreach ($list_bentuksediaan as $bentuksediaan) {
+						 	if($row_data->kode_bentuksediaan == $bentuksediaan['kode_bentuksediaan']){
+								echo $bentuksediaan['nama_bentuksediaan'];
+						 	}
+						 } 
+					?>
+				</td>
+			</tr>
+		</table> 
+		
 	</div>
 
 	<div class="content">
-		<h2>Chlorpromazine</h2>
-		<div class="topcontent">
-		
-					<div class="content1">
-			<img class="img-thumbnail" src="<?php echo base_url().'assets/images/Chlorpromazine.jpg'?>">	
-		</div>
-		<div class="content1">
+		<h2><?php echo $row_data->nama_obat;?></h2>
 
-			<b>Pengertian</b><br>
-			<p>Penjelasan pengertian....</p>
-			<b>Kategori : -</b><br>
-			<b>Golongan : -</b>
-		</div>
-		</div>
+		<div class="detailcontent">
+			<div class="col-md-5">
+					<img class="img-thumbnail" src="<?php echo base_url().'assets/images/obat/'.$row_data->gambar_obat?>">
+				</div>
 
-<div class="detailcontent">
-	<div class="col-md-6">
-			<b>Kegunaan :</b>
-			<p>Untuk mengobati gangguan jiwa atau suasana hati tertentu (seperti skizofrenia, gangguan psikotik, fase manik dari gangguan bipolar, masalah perilaku yang parah pada anak-anak),mengontrol mual, muntah, meredakan cegukan berkepanjangan, meredakan kegelisahan, kecemasan sebelum operasi, dan membantu mengobati tetanus.</p>
+				<div class="col-md-7">
+					<b>Deskripsi</b><br>
+					<p><?php echo $row_data->deskripsi_obat;?></p>
+
+					<b>Kemasan</b><br>
+					<p><?php echo $row_data->kemasan_obat;?></p>
+
+					<b>Kandungan </b>
+					<p><?php echo $row_data->kandungan_obat;?></p>
+				</div>
 		</div>
 
-		<div class="col-md-6">
-			<b>Kandungan :</b>
-			<p>Kandungan.........</p>
-		</div>
-</div>
-		
-<div class="detailcontent">
-	<div class="col-md-6">
-			<b>Dosis dan Cara Penggunaan : </b>
-			<p>Dosis.........</p>
-		</div>
+		<div class="detailcontent">
+			<div class="col-md-6">
+				<b>Kegunaan </b>
+				<ul>
+				<?php
+					if($list_kegunaan->num_rows() == 0)
+					{
+						echo '-';
+					}
+					foreach ($list_kegunaan->result() as $kegunaan) {
+				?>
+					<li><?php echo $kegunaan->isi_kegunaan;?></li>											
+				<?php
+					}	
+				?>	
+				</ul>
+			</div>
 
-		<div class="col-md-6">
-			<b>Efek Samping : </b>
-			<p>Pusing , mengantuk, kecemasan, masalah tidur (insomnia);
-				Payudara  bengkak atau keluar cairan
-				Perubahan  di periode menstruasi;
-				Berat badan bertambah  bengkak di tangan atau kaki;
-				Mulut kering atau hidung tersumbat, penglihatan kabur;
-				Sembelit ; atau
-				Impotensi  kesulitan mengalami orgasme.</p>
+				<div class="col-md-6">
+					<b>Indikasi Umum </b>
+					<p><?php echo $row_data->indikasiumum_obat;?></p>
+				</div>
 		</div>
-</div>
-		
-		
-		
+				
+		<div class="detailcontent">
+			<div class="col-md-6">
+				<b>Dosis dan Cara Penggunaan  </b>
+				<p>Cara penggunaan : <?php echo $row_data->carapenggunaan_obat;?></p>
+				Dosis :
+
+				<ul>
+				<?php
+					if($list_dosis->num_rows() == 0)
+					{
+						echo '-';
+					}
+					foreach ($list_dosis->result() as $dosis) {
+				?>
+					<li><?php echo $dosis->isi_dosis;?></li>											
+				<?php
+					}	
+				?>	
+				</ul>
+			</div>
+
+			<div class="col-md-6">
+				<b>Efek Samping  </b>
+				<ul>
+				<?php
+					if($list_efeksamping->num_rows() == 0)
+					{
+						echo '-';
+					}
+					foreach ($list_efeksamping->result() as $efeksamping) {
+				?>
+					<li><?php echo $efeksamping->isi_efeksamping;?></li>											
+				<?php
+					}	
+				?>	
+				</ul>
+			</div>
+		</div>
 	</div>
-<!-- 	<div class="content">
-		
-	</div> -->
-	
-
 </div>

@@ -1,25 +1,51 @@
-<div class="badan">
-	
-	<div class="sidebar">
-	<h3>Form Pencarian Kemiripan Obat</h3><br>
-		<form action="#" method="post">
-			<label for="fnama">Nama Obat</label>
-			<input type="text" id="fnama" name="nama" placeholder="Masukkan Nama Obat">
-			
-			<input type="submit" name="submit" value="Cari">
-		</form>
-	</div>
-
-	<div class="content">
-		<h4>Kami menemukan 2 kemiripan Obat</h4>
-		<div class="col-lg-3 col-md-6 mb-3">
-			<img class="img-thumbnail" src="<?php echo base_url().'assets/images/Chlorpromazine.jpg'?>">
-				Chlorpromazine
-		</div>
-		<div class="col-lg-3 col-md-6 mb-3">
-			<img class="img-thumbnail" src="<?php echo base_url().'assets/images/Chlorpromazine.jpg'?>">
-				Chlorpromazine
-		</div>
-	</div>
-
+<div id="search">
+<!-- <form action="<?php echo base_url().'index.php/Page/Search'?>" method="post" > -->
+	<input type="text" name="keyword" placeholder="Search.."/>
+<!-- 	<input type="submit" value="Search"/> -->
+<!-- </form> -->
+</div>
+<div class="container">
+<h3>Nama Obat Mirip</h3>
+		<table class="table table-hover table-dark">
+		  <thead>
+		    <tr>
+		      <th scope="col">Nama Obat 1</th>
+		      <th scope="col">Nama Obat 2</th>
+		      <th scope="col">Aksi</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		  <?php
+				foreach($list_namamirip as $row) 
+				{
+			?>
+		    <tr>
+		      <td>
+		      	<?php 
+		      		foreach ($list_obat as $obat) {
+		      			if($row['kode_obat1'] == $obat['kode_obat']) {
+		      				echo $obat['nama_obat'];
+		      			}
+		      		}
+		      	?>
+		      </td>
+		      <td>
+		      	<?php 
+		      		foreach ($list_obat as $obat) {
+		      			if($row['kode_obat2'] == $obat['kode_obat']) {
+		      				echo $obat['nama_obat'];
+		      			}
+		      		}
+		      	?>
+		      </td>
+		     
+		      <td>
+		      	<a class="btn btn-primary" href="<?php echo base_url().'index.php/Page/DetailNamaMirip/'.$row['kode_obat1'].'/'.$row['kode_obat2']?>">View Detail</a>
+		      </td>
+		    </tr>
+		  <?php
+		  	}
+		  ?>
+		  </tbody>
+		</table>	
 </div>
