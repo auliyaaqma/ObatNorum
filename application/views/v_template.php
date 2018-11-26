@@ -13,11 +13,11 @@
 	<nav class="navbar navbar-inverse">
 	  <div class="container-fluid">
 	    <ul class="nav navbar-nav">
-	      <li><a href="<?php echo base_url().'index.php/c_page/index'?>">Beranda</a></li>
-	      <li><a href="<?php echo base_url().'index.php/c_page/pencarian'?>">Pencarian</a></li>
-	      <li><a href="<?php echo base_url().'index.php/c_page/namaobatmirip'?>">Nama Obat Mirip</a></li>
-	      <li><a href="<?php echo base_url().'index.php/c_page/kemasanmirip'?>">Kemasan Mirip</a></li>
-	      <li><a href="<?php echo base_url().'index.php/c_page/kontak'?>">Kontak</a></li>
+	      <li><a href="<?php echo base_url().'index.php/Page/index'?>">Beranda</a></li>
+	      <li><a href="<?php echo base_url().'index.php/Page/Pencarian'?>">Pencarian</a></li>
+	      <li><a href="<?php echo base_url().'index.php/Page/NamaObatMirip'?>">Nama Obat Mirip</a></li>
+	      <li><a href="<?php echo base_url().'index.php/Page/RupaObatMirip'?>">Rupa Obat Mirip</a></li>
+	      <li><a href="<?php echo base_url().'index.php/Page/Kontak'?>">Kontak</a></li>
 	    </ul>
 	  </div>
 	</nav>

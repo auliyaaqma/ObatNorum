@@ -2,7 +2,7 @@
 /**
 * 
 */
-class C_page extends CI_Controller
+class Page extends CI_Controller
 {
 	
 	function __construct()
@@ -17,25 +17,25 @@ class C_page extends CI_Controller
 		$this->load->view('v_template', $data);
 	}
 
-	function pencarian()
+	function Pencarian()
 	{
 		$data['content_view']="v_pencarian.php";
 		$this->load->view('v_template', $data);
 	}
 
-	function namaobatmirip()
+	function NamaObatMirip()
 	{
 		$data['content_view']="v_nama_obat_mirip.php";
 		$this->load->view('v_template', $data);
 	}
 
-	function kemasanmirip()
+	function RupaObatMirip()
 	{
 		$data['content_view']="v_kemasan_mirip.php";
 		$this->load->view('v_template', $data);
 	}
 
-	function kontak()
+	function Kontak()
 	{
 		$data['content_view']="v_kontak.php";
 		$this->load->view('v_template', $data);
