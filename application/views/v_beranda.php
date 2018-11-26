@@ -54,4 +54,11 @@
 				Chlorpromazine
 		</div>
 	</div>
+
+	<?php
+		foreach($list_golongan as $row) 
+		{
+			echo $row['nama_golongan'];
+		}
+	?>
 </div>

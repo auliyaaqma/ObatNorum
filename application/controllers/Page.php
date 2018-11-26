@@ -8,12 +8,13 @@ class Page extends CI_Controller
 	function __construct()
 	{
 		parent::__construct();
-		// $this->load->model('m_norum');
+		$this->load->model('m_norum');
 	}
 
 	function index()
 	{
 		$data['content_view']="v_beranda.php";
+		$data['list_golongan']=$this->m_norum->get_list_golongan();
 		$this->load->view('v_template', $data);
 	}
 
