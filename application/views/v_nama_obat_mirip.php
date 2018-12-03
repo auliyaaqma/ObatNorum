@@ -8,12 +8,12 @@
 <h3>Nama Obat Mirip</h3>
 		<table class="table table-hover table-dark">
 		  <thead>
-		    <tr  class="row_obat" >
-		      <th scope="col">Nama Obat 1</th>
-		      <th scope="col" style="width:20%">Gambar Obat 1</th>
-		      <th scope="col">Nama Obat 2</th>
-		      <th scope="col" style="width:20%">Gambar Obat 2</th>
-		      <th scope="col">Aksi</th>
+		    <tr>
+		      <th scope="col" style="text-align:center" >Nama Obat 1</th>
+		      <th scope="col" style="width:20%;text-align:center">Gambar Obat 1</th>
+		      <th scope="col" style="text-align:center">Nama Obat 2</th>
+		      <th scope="col" style="width:20%;text-align:center">Gambar Obat 2</th>
+		      <th scope="col" style="text-align:center"">Aksi</th>
 		    </tr>
 		  </thead>
 		  <tbody>

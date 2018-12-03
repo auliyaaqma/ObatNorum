@@ -9,9 +9,11 @@
 		<table class="table table-hover table-dark">
 		  <thead>
 		    <tr>
-		      <th scope="col">Nama Obat 1</th>
-		      <th scope="col">Nama Obat 2</th>
-		      <th scope="col">Aksi</th>
+		      <th scope="col" style="text-align:center" >Nama Obat 1</th>
+		      <th scope="col" style="width:20%;text-align:center">Gambar Obat 1</th>
+		      <th scope="col" style="text-align:center">Nama Obat 2</th>
+		      <th scope="col" style="width:20%;text-align:center">Gambar Obat 2</th>
+		      <th scope="col" style="text-align:center"">Aksi</th>
 		    </tr>
 		  </thead>
 		  <tbody>
@@ -19,25 +21,33 @@
 				foreach($list_rupamirip as $row) 
 				{
 			?>
-		    <tr>
+		    <tr class="row_obat" style="text-align:center">
 		      <td>
 		      	<?php 
 		      		foreach ($list_obat as $obat) {
 		      			if($row['kode_obat1'] == $obat['kode_obat']) {
 		      				echo $obat['nama_obat'];
+		      	?>
+		      </td>
+		      <td><img class="img-thumbnail" src="<?php echo base_url().'assets/images/obat/'.$obat['gambar_obat']?>"></td>
+		      	<?php
 		      			}
 		      		}
 		      	?>
-		      </td>
+		      
 		      <td>
 		      	<?php 
 		      		foreach ($list_obat as $obat) {
 		      			if($row['kode_obat2'] == $obat['kode_obat']) {
 		      				echo $obat['nama_obat'];
+		      	?>
+		      </td>
+		      <td><img class="img-thumbnail" src="<?php echo base_url().'assets/images/obat/'.$obat['gambar_obat']?>"></td>
+		      	<?php
 		      			}
 		      		}
 		      	?>
-		      </td>
+		      
 		     
 		      <td>
 		      	<a class="btn btn-primary" href="<?php echo base_url().'index.php/Page/DetailNamaMirip/'.$row['kode_obat1'].'/'.$row['kode_obat2']?>">View Detail</a>
