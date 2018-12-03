@@ -158,6 +158,10 @@ input[type=submit]:hover {
 	border: 1px solid;
 }
 
+tr .row_obat{
+	text-align: center;
+}
+
 #search{
 	float: right;
 	width: 20%;

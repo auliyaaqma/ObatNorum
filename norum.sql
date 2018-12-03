@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 26, 2018 at 11:07 PM
+-- Generation Time: Dec 03, 2018 at 02:28 PM
 -- Server version: 10.1.34-MariaDB
 -- PHP Version: 7.2.7
 
@@ -233,7 +233,15 @@ CREATE TABLE `lasa` (
 --
 
 INSERT INTO `lasa` (`kode_lasa`, `kode_obat1`, `kode_obat2`, `status_lasa`) VALUES
-(1, 1, 2, 1);
+(1, 1, 2, 1),
+(2, 3, 4, 1),
+(3, 5, 6, 1),
+(4, 7, 8, 1),
+(5, 9, 10, 1),
+(6, 11, 12, 1),
+(7, 13, 14, 1),
+(8, 15, 16, 1),
+(9, 17, 18, 1);
 
 -- --------------------------------------------------------
 
@@ -262,22 +270,23 @@ CREATE TABLE `obat` (
 INSERT INTO `obat` (`kode_obat`, `nama_obat`, `kandungan_obat`, `carapenggunaan_obat`, `gambar_obat`, `indikasiumum_obat`, `deskripsi_obat`, `kemasan_obat`, `kode_kategori`, `kode_bentuksediaan`, `kode_golongan`) VALUES
 (1, 'AMLOdipine', 'Amlodipine 10 mg', 'Sebelum atau sesudah makan', 'Amlodipine-10mg-Tablets.png', 'Hipertensi, Iskemia Miokardial, Angina.', 'Struktur amlodipine adalah 3-ethil-5-methil-2-(2-aminoethoxymethyl)-4-(2-chlorophenyl)-1,4-dihydro-6-methyl-3,5 pyridinedicarboxylate benzenesulphonate.', 'Tablet 10 Mg X 3 X 10', 1, 3, 1),
 (2, 'NIFEdipine', 'Nifedipine', '-', 'nifedipine.jpg', '-', '-', '-', 1, 3, 1),
-(3, 'AMINOfusin', 'Amino acids 50 g, vitamins, electrolytes', '-', '-', '-', '-', '-', 1, 1, 1),
-(4, 'COMAfusin', 'Asam amino 50 g dengan 50% BCAA, xylitol, vitamin, dan elektrolit.', '-', '-', 'Seluruh kasus-kasus berat insufisiensi hati dengan koma eksogenus atau prekoma hepatikum.', 'Mengandung 50 gram asam amino, xylitol, elektrolit, 50 % BCAA, dan vitamin, Comafusin merupakan cairan infus yang berfungsi sebagai nutrisi dan dikhususkan untuk pasien dengan penyakit hati yang disertai dengan kondisi prekoma hepatikum atau koma eksofagus. Dimasukkan secara intravena dengan dosis antara 15 hingga 20 tetes setiap menitnya. Penggunaan harus berdasarkan resep atau petunjuk dari dokter, terutama untuk ibu hamil dan menyusui untuk mengurangi efek samping dari obat ini. Hindari berkendara apabila merasa pusing danmengantuk setelah menggunakan Comafusin.', 'botol 500 ml', 1, 1, 1),
-(5, 'alloPURINol', 'Allopurinol 100 mg', 'Sesudah makan', '-', 'Hiperurisemia primer dan sekunder (gout)', '-', 'Tablet 100 Mg X 10 X 10', 1, 1, 1),
-(6, 'haloPERIDol', 'haloperidol', '-', '-', 'untuk mengatasi gejala psikosis pada gangguan mental, seperti skizofrenia.', '-', 'Box, 10 strip x 10 tablet', 1, 1, 1),
-(7, 'APTor', 'Acetylsalicylic acid 100 mg', 'Sesudah makan', '-', 'Menurunkan resiko Trombosis Koroner lebih lanjut selama fase pemulihan dari Infark Miokard, mengurangi resiko berulangnya serangan iskemik sepintas & stroke pada pasien, untuk meringankan rasa nyeri, seperti pada sakit kepala, sakit gigi.', '-', 'Dus, 10 Strip @ 10 Tablet Salut Enterik', 1, 1, 1),
-(8, 'LIPITor', 'Atorvastatin Calcium Trihydrate 40 mg', 'Diminum sebelum atau sesudah makan', '-', 'Tambahan terhadap diet untuk menurunkan kadar Kolesterol Total, LDL, Apolipoprotein B & Trigliserida yang meningkat pada pasien dengan Hiperkolesterolemia primer, Hiperlipidemia kombinasi atau campuran, Hiperkolesterolemia famili heterozigot & homozigot jika respon diet & tindakan nonfarmakologi tidak adekuat. Pencegahan komplikasi kardiovaskular.', 'Diproduksi oleh Pfizer, obat ini adalah terapi tambahan untuk menurunkan kadar kolesterol tinggi, LDL, Apolipoprotein B, dan Trigliserida pada pasien dengan Hiperkolesterolemia primer, Hiperlipidemia kombinasi atau campuran, Hiperkolesterolemia famili heterozigos dan homozigos. Kandungan atorvastatin dapat bekerja menghambat reaksi beberapa enzim yang dibutuhkan tubuh untuk memproduksi kolesterol. Resiko penyakit jantung dan penyakit pembuluh darah pun dapat ditekan. Agar lebih aman, minta petunjuk dokter saat hendak mengonsumsinya.', 'Dus, 3 Strip @ 10 Tablet Salut', 1, 1, 1),
-(9, 'asam TRANEXamat', 'ASAM TRANEKSAMAT', '-', '-', 'fibrinolisis lokal, edema, pendarahan abnormal', '-', 'ampul', 1, 1, 1),
-(10, 'asam MEFENamat', 'Asam mefenamat 250 mg', 'diberikan sesudah makan', '-', 'Meredakan nyeri ringan sampai sedang karena sakit kepala, sakit gigi, dismenore primer, karena trauma, nyeri otot dan sesudah operasi', '-', 'Dus, 10 Strip X 10 Tablet', 1, 1, 1),
-(11, 'AZIthromycin', 'AZITHROMYCIN', '-', '-', 'Infeksi saluran napas atas & bwh, kulit & struktur kulit, uretritis & servisitis non GO krn Chlamydia trachomatis. Terapi pneumonia komuniti yang disebabkan oleh organisme yang peka.', '-', 'botol infus', 1, 1, 1),
-(12, 'ERYthromycin', 'ERYTHROMYCIN', 'Dikonsumsi pada perut kosong (1 atau 2 jam sebelum/sesudah makan)', '-', 'Untuk mencegah infeksi saluran nafas bagian atas terutama yang disebabkan oleh kuman S. pyogenes (streptokokus grup A beta-hemolitik)', '-', 'Tablet 500 X 100 X 1', 1, 1, 1),
-(13, 'BISOPRolol', 'Bisoprolol', 'Sesudah makan', '-', 'Untuk hipertensi, bisa digunakan sebagai monoterapi atau dikombinasikan dengan antihipertensi lain.', '-', '1 Dos Isi 10 Strip X 10 Tablet', 1, 1, 1),
-(14, 'PROPANolol', 'Propanolol HCl 10 mg', 'Berikan sebelum makan', '-', 'Terapi hipertensi, angina, aritmia, pencegahan migrain', '-', '1 Dos Isi 10 Strip X 10 Tablet', 1, 1, 1),
-(15, 'Brainact O-DIS', 'Citicoline 500 mg', 'Diletakkan dalam rongga mulut sampai tab larut', '-', 'Untuk membantu menangani penurunan kognitif pada usia lanjut', 'Brainact O-Dis merupakan obat berupa tablet yang diindikasikan untuk membantu menangani gangguan kesehatan yang disebabkan karena terjadinya penurunan kognitif pada usia lanjut. Diproduksi oleh Kalbe Farma, obat ini mengandung citicoline 500 miligram yang berfungsi untuk mengurangi kerusakan otak yang disebabkan karena stroke, parkinson, cedera kepala yang disebabkan karena kecelakaan, demensia, alzheimer, dan lain sebagainya. Penggunaan obat ini harus dengan resep atau anjuran dari dokter. Waspada penggunaan jangka panjang yang bisa menimbulkan diare, sakit kepala, dan sulit tidur.', '1 Dos Isi 3 Strip X 10 Tablet', 1, 1, 1),
-(16, 'Brainact', 'Citicoline 1000 mg', 'Dapat diberikan sebelum atau sesudah makan', '-', 'untuk membantu menangani penurunan kognitif pada usia lanjut', '-', '1 Dos isi 3 Strip x 10 Tablet', 1, 1, 1),
+(3, 'AMINOfusin', 'Amino acids 50 g, vitamins, electrolytes', '-', '3935.jpg', '-', '-', '-', 1, 1, 1),
+(4, 'COMAfusin', 'Asam amino 50 g dengan 50% BCAA, xylitol, vitamin, dan elektrolit.', '-', '15978.jpg', 'Seluruh kasus-kasus berat insufisiensi hati dengan koma eksogenus atau prekoma hepatikum.', 'Mengandung 50 gram asam amino, xylitol, elektrolit, 50 % BCAA, dan vitamin, Comafusin merupakan cairan infus yang berfungsi sebagai nutrisi dan dikhususkan untuk pasien dengan penyakit hati yang disertai dengan kondisi prekoma hepatikum atau koma eksofagus. Dimasukkan secara intravena dengan dosis antara 15 hingga 20 tetes setiap menitnya. Penggunaan harus berdasarkan resep atau petunjuk dari dokter, terutama untuk ibu hamil dan menyusui untuk mengurangi efek samping dari obat ini. Hindari berkendara apabila merasa pusing danmengantuk setelah menggunakan Comafusin.', 'botol 500 ml', 1, 1, 1),
+(5, 'alloPURINol', 'Allopurinol 100 mg', 'Sesudah makan', '15085.jpg', 'Hiperurisemia primer dan sekunder (gout)', '-', 'Tablet 100 Mg X 10 X 10', 1, 1, 1),
+(6, 'haloPERIDol', 'haloperidol', '-', '18933.jpg', 'untuk mengatasi gejala psikosis pada gangguan mental, seperti skizofrenia.', '-', 'Box, 10 strip x 10 tablet', 1, 1, 1),
+(7, 'APTor', 'Acetylsalicylic acid 100 mg', 'Sesudah makan', '8884.jpg', 'Menurunkan resiko Trombosis Koroner lebih lanjut selama fase pemulihan dari Infark Miokard, mengurangi resiko berulangnya serangan iskemik sepintas & stroke pada pasien, untuk meringankan rasa nyeri, seperti pada sakit kepala, sakit gigi.', '-', 'Dus, 10 Strip @ 10 Tablet Salut Enterik', 1, 1, 1),
+(8, 'LIPITor', 'Atorvastatin Calcium Trihydrate 40 mg', 'Diminum sebelum atau sesudah makan', '15234.jpg', 'Tambahan terhadap diet untuk menurunkan kadar Kolesterol Total, LDL, Apolipoprotein B & Trigliserida yang meningkat pada pasien dengan Hiperkolesterolemia primer, Hiperlipidemia kombinasi atau campuran, Hiperkolesterolemia famili heterozigot & homozigot jika respon diet & tindakan nonfarmakologi tidak adekuat. Pencegahan komplikasi kardiovaskular.', 'Diproduksi oleh Pfizer, obat ini adalah terapi tambahan untuk menurunkan kadar kolesterol tinggi, LDL, Apolipoprotein B, dan Trigliserida pada pasien dengan Hiperkolesterolemia primer, Hiperlipidemia kombinasi atau campuran, Hiperkolesterolemia famili heterozigos dan homozigos. Kandungan atorvastatin dapat bekerja menghambat reaksi beberapa enzim yang dibutuhkan tubuh untuk memproduksi kolesterol. Resiko penyakit jantung dan penyakit pembuluh darah pun dapat ditekan. Agar lebih aman, minta petunjuk dokter saat hendak mengonsumsinya.', 'Dus, 3 Strip @ 10 Tablet Salut', 1, 1, 1),
+(9, 'asam TRANEXamat', 'ASAM TRANEKSAMAT', '-', '19015.jpg', 'fibrinolisis lokal, edema, pendarahan abnormal', '-', 'ampul', 1, 1, 1),
+(10, 'asam MEFENamat', 'Asam mefenamat 250 mg', 'diberikan sesudah makan', '17658.jpg', 'Meredakan nyeri ringan sampai sedang karena sakit kepala, sakit gigi, dismenore primer, karena trauma, nyeri otot dan sesudah operasi', '-', 'Dus, 10 Strip X 10 Tablet', 1, 1, 1),
+(11, 'AZIthromycin', 'AZITHROMYCIN', '-', '18303.jpg', 'Infeksi saluran napas atas & bwh, kulit & struktur kulit, uretritis & servisitis non GO krn Chlamydia trachomatis. Terapi pneumonia komuniti yang disebabkan oleh organisme yang peka.', '-', 'botol infus', 1, 1, 1),
+(12, 'ERYthromycin', 'ERYTHROMYCIN', 'Dikonsumsi pada perut kosong (1 atau 2 jam sebelum/sesudah makan)', '15107.jpg', 'Untuk mencegah infeksi saluran nafas bagian atas terutama yang disebabkan oleh kuman S. pyogenes (streptokokus grup A beta-hemolitik)', '-', 'Tablet 500 X 100 X 1', 1, 1, 1),
+(13, 'BISOPRolol', 'Bisoprolol', 'Sesudah makan', '17683.jpg', 'Untuk hipertensi, bisa digunakan sebagai monoterapi atau dikombinasikan dengan antihipertensi lain.', '-', '1 Dos Isi 10 Strip X 10 Tablet', 1, 1, 1),
+(14, 'PROPANolol', 'Propanolol HCl 10 mg', 'Berikan sebelum makan', '17603.jpg', 'Terapi hipertensi, angina, aritmia, pencegahan migrain', '-', '1 Dos Isi 10 Strip X 10 Tablet', 1, 1, 1),
+(15, 'Brainact O-DIS', 'Citicoline 500 mg', 'Diletakkan dalam rongga mulut sampai tab larut', '18318.jpg', 'Untuk membantu menangani penurunan kognitif pada usia lanjut', 'Brainact O-Dis merupakan obat berupa tablet yang diindikasikan untuk membantu menangani gangguan kesehatan yang disebabkan karena terjadinya penurunan kognitif pada usia lanjut. Diproduksi oleh Kalbe Farma, obat ini mengandung citicoline 500 miligram yang berfungsi untuk mengurangi kerusakan otak yang disebabkan karena stroke, parkinson, cedera kepala yang disebabkan karena kecelakaan, demensia, alzheimer, dan lain sebagainya. Penggunaan obat ini harus dengan resep atau anjuran dari dokter. Waspada penggunaan jangka panjang yang bisa menimbulkan diare, sakit kepala, dan sulit tidur.', '1 Dos Isi 3 Strip X 10 Tablet', 1, 1, 1),
+(16, 'Brainact', 'Citicoline 1000 mg', 'Dapat diberikan sebelum atau sesudah makan', '18311.jpg', 'untuk membantu menangani penurunan kognitif pada usia lanjut', '-', '1 Dos isi 3 Strip x 10 Tablet', 1, 1, 1),
 (17, 'CardisAN', 'Amlodipine 10 mg', 'Sebelum atau sesudah makan', '-', 'Hipertensi, Iskemia Miokardial, Angina.', '-', '1 Dos Isi 5 Strip X 10 Tablet', 1, 1, 1),
-(18, 'CardisMO', 'Isosorbide 5-mononitrate 20 mg', 'Sebelum atau sesudah makan', '-', 'Terapi jangka panjang Penyakit Jantung Koroner/PJK dan pencegahan Angina Pektoris , terapi tambahan pada Gagal Jantung Kongestif yang tidak respon adekuat terhadap glikosida jantung dan/atau diuretik.', '-', 'Tablet 20 Mg X 10 X 10', 1, 1, 1);
+(18, 'CardisMO', 'Isosorbide 5-mononitrate 20 mg', 'Sebelum atau sesudah makan', '-', 'Terapi jangka panjang Penyakit Jantung Koroner/PJK dan pencegahan Angina Pektoris , terapi tambahan pada Gagal Jantung Kongestif yang tidak respon adekuat terhadap glikosida jantung dan/atau diuretik.', '-', 'Tablet 20 Mg X 10 X 10', 1, 1, 1),
+(19, 'CLARITIN SIRUP', 'Per-5 mL : Loratadine 5 mg', 'Berikan sesudah makan', '3543.jpg', 'Meredakan gejala2 yang berhubungan dengan Rinitis alergi, mata gatal dan panas, meredakan gejala2 Urtikaria Khronis & gangguan Alergi dermatologis/kulit lainnya.', '-', 'Botol 60 ml', 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -404,13 +413,13 @@ ALTER TABLE `kegunaan`
 -- AUTO_INCREMENT for table `lasa`
 --
 ALTER TABLE `lasa`
-  MODIFY `kode_lasa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `kode_lasa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `obat`
 --
 ALTER TABLE `obat`
-  MODIFY `kode_obat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `kode_obat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `peringatan`

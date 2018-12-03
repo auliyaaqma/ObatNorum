@@ -8,9 +8,11 @@
 <h3>Nama Obat Mirip</h3>
 		<table class="table table-hover table-dark">
 		  <thead>
-		    <tr>
+		    <tr  class="row_obat" >
 		      <th scope="col">Nama Obat 1</th>
+		      <th scope="col" style="width:20%">Gambar Obat 1</th>
 		      <th scope="col">Nama Obat 2</th>
+		      <th scope="col" style="width:20%">Gambar Obat 2</th>
 		      <th scope="col">Aksi</th>
 		    </tr>
 		  </thead>
@@ -19,21 +21,30 @@
 				foreach($list_namamirip as $row) 
 				{
 			?>
-		    <tr>
+		    <tr class="row_obat" style="text-align:center">
 		      <td>
 		      	<?php 
 		      		foreach ($list_obat as $obat) {
 		      			if($row['kode_obat1'] == $obat['kode_obat']) {
 		      				echo $obat['nama_obat'];
+		      				?>
+		      </td>
+		      <td><img class="img-thumbnail" src="<?php echo base_url().'assets/images/obat/'.$obat['gambar_obat']?>"></td>
+		      	<?php
+
 		      			}
 		      		}
 		      	?>
-		      </td>
+
 		      <td>
 		      	<?php 
 		      		foreach ($list_obat as $obat) {
 		      			if($row['kode_obat2'] == $obat['kode_obat']) {
 		      				echo $obat['nama_obat'];
+		      	?>
+		      </td>
+		      <td><img class="img-thumbnail" src="<?php echo base_url().'assets/images/obat/'.$obat['gambar_obat']?>"></td>
+		      	<?php			
 		      			}
 		      		}
 		      	?>
