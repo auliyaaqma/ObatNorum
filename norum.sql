@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 03, 2018 at 02:28 PM
+-- Generation Time: Dec 03, 2018 at 02:56 PM
 -- Server version: 10.1.34-MariaDB
 -- PHP Version: 7.2.7
 
@@ -241,7 +241,16 @@ INSERT INTO `lasa` (`kode_lasa`, `kode_obat1`, `kode_obat2`, `status_lasa`) VALU
 (6, 11, 12, 1),
 (7, 13, 14, 1),
 (8, 15, 16, 1),
-(9, 17, 18, 1);
+(9, 17, 18, 1),
+(10, 19, 21, 0),
+(11, 20, 22, 0),
+(12, 23, 24, 0),
+(13, 25, 26, 0),
+(14, 27, 28, 0),
+(15, 29, 30, 0),
+(16, 31, 32, 0),
+(17, 33, 34, 0),
+(18, 35, 36, 0);
 
 -- --------------------------------------------------------
 
@@ -286,7 +295,24 @@ INSERT INTO `obat` (`kode_obat`, `nama_obat`, `kandungan_obat`, `carapenggunaan_
 (16, 'Brainact', 'Citicoline 1000 mg', 'Dapat diberikan sebelum atau sesudah makan', '18311.jpg', 'untuk membantu menangani penurunan kognitif pada usia lanjut', '-', '1 Dos isi 3 Strip x 10 Tablet', 1, 1, 1),
 (17, 'CardisAN', 'Amlodipine 10 mg', 'Sebelum atau sesudah makan', '-', 'Hipertensi, Iskemia Miokardial, Angina.', '-', '1 Dos Isi 5 Strip X 10 Tablet', 1, 1, 1),
 (18, 'CardisMO', 'Isosorbide 5-mononitrate 20 mg', 'Sebelum atau sesudah makan', '-', 'Terapi jangka panjang Penyakit Jantung Koroner/PJK dan pencegahan Angina Pektoris , terapi tambahan pada Gagal Jantung Kongestif yang tidak respon adekuat terhadap glikosida jantung dan/atau diuretik.', '-', 'Tablet 20 Mg X 10 X 10', 1, 1, 1),
-(19, 'CLARITIN SIRUP', 'Per-5 mL : Loratadine 5 mg', 'Berikan sesudah makan', '3543.jpg', 'Meredakan gejala2 yang berhubungan dengan Rinitis alergi, mata gatal dan panas, meredakan gejala2 Urtikaria Khronis & gangguan Alergi dermatologis/kulit lainnya.', '-', 'Botol 60 ml', 1, 1, 1);
+(19, 'CLARITIN SIRUP', 'Per-5 mL : Loratadine 5 mg', 'Berikan sesudah makan', '3543.jpg', 'Meredakan gejala2 yang berhubungan dengan Rinitis alergi, mata gatal dan panas, meredakan gejala2 Urtikaria Khronis & gangguan Alergi dermatologis/kulit lainnya.', '-', 'Botol 60 ml', 1, 1, 1),
+(20, 'CODIPRONT CUM EXPECTORANT ', 'Per 5 mL : Codeine 11.11 mg, phenyltoloxamine 3.67 mg, guaifenesin 55.55 mg, thyme liquid extr 55.55 mg', '-', '15934.jpg', 'Meredakan batuk & membantu pengeluaran dahak dr sal napas pd kondisi alergi, paroksismal, bronkitis akut & kronik.', 'Codipront Cum Expectorant Syrup 60 ml merupakan obat untuk meredakan batuk dan membantu pengeluaran dahak dari saluran pernapasan pada keadaan alergi, paroksismal, serta bronkitis akut dan kronik. Komposisinya terdiri dari Kodein, Feniltoloksamin (nasal dekongestan), Guaifenesin, dan ekstrak thyme cair. Kombinasi tersebut bekerja dengan cara mengurangi batuk dengan penekanan sentral pada pusat batuk, serta mengencerkan dahak pada saluran napas agar mudah dikeluarkan dan bisa melegakan jalur napas.', '-', 1, 1, 1),
+(21, 'CELESTAMINE SIRUP', 'Per 5 mL : Betamethasone 0.25 mg, dexchlorpheniramine maleate 2 mg', 'Sesudah makan', '4828.jpg', 'Alergi pada saluran pernapasan, kulit dan mata', '-', 'Sirup 0.25 Mg/ 5 ml X 60 ml X 1', 1, 1, 1),
+(22, 'CODIPRONT SIRUP ', 'Codeine 11.11 mg, phenyltoloxamine 3.67 mg.', 'Diberikan bersama makanan', '19045.jpg', 'untuk batuk iritatif (batuk kering/non produktif) yang disebabkan alergi.', '-', 'Botol, 60 ml', 1, 1, 1),
+(23, 'ELKANA SIRUP', 'Per-5 mL : Vit.A 2400 iu, vit.B1 4 mg, vit.B2 1.2 mg, vit.B6 1.2 mg, vit.B12 4 mcg, vit.C 60 mg, vit.D 400 IU, Nicotinamide 16 mg, Choline 12 mg, Inositol 12 mg, Ca 33.1 mg, Na 5.2 mg, L-Lysine HCl 200 mg.', 'Sebelum atau sesudah makan, dapat bersama makanan untuk absorpsi yang lebih baik atau jika timbul ketidak-nyamanan pada saluran cerna.', '1334.jpg', 'Defisiensi vitamin dan mineral', '-', 'Botol 60 ml Dalam Dus', 1, 1, 1),
+(24, 'ELKANA CL SIRUP', 'Vitamin A 2400 IU, vitamin D 400 IU, cod liver oil 8 mg, DHA 10 mg, arachidonic acid (AA) 15 mg, curcuma extrak 12 mg, vitamin B1 4 mg, vitamin B2 1.2 mg, vitamin B6 1.2 mg, vitamin B12 4 mcg, nicotinamide 16 mg, choline 12 mg, inositol 12 mg, L-lysine HCl 100 mg, Ca 33.1 mg, Na 5.2 mg, GOS 500 mg', 'Dapat diberikan bersama makanan agar diabsorpsi lebih baik atau jika timbul rasa tidak nyaman pada GI', '9785.jpg', 'Defisiensi vitamin dan mineral', '-', 'Sirup 120 ml X 1', 1, 1, 1),
+(25, 'HEPTASAN TABLET', 'Cyproheptadine / Siproheptadine Hcl', '-', '18581.jpg', 'Pengobatan terhadap penyakit alergi seperti : rinitis vasomotor, pruritus, cold urticaria, dermatografisme.', '-', '1 Dos Isi 10 Strip X 10 Tablet', 1, 1, 1),
+(26, 'HISTAPAN TABLET', 'Mebhidrolin Napadisilat 50 Mg', '-', '14204.jpg', 'Histapan digunakan untuk pengobatan terhadap penyakit alergi.', '-', '1 Dos Isi 10 Strip X 10 Tablet', 1, 1, 1),
+(27, 'ILIADIN MOIST DROPS ', 'NaCl', '-', '16210.jpg', 'Membersihkan & melegakan hidung tersumbat akibat flu dan alergi; melembabkan & meringankan hidung yang kering dan berkerak; membersihkan hidung sblm pemberian obat pada hidung.', '-', 'Botol 30 ml', 1, 1, 1),
+(28, 'ILIADIN NASAL SPRAY', 'Oxymetazoline HCl 0.05%', 'Disemprotkan kedalam lubang hidung, pagi & malam hari', '4789.jpg', 'Meredakan sumbatan hidung akibat Rinitis akut, Sinusitis akut & khronis, Rinitis alergi', '-', 'Botol 10 ml Dalam Dus', 1, 1, 1),
+(29, 'RETIVIT KAPLET', 'Beta-carotene 0.6 mg, vit.C 200 mg, vit.E 60 mg, Zn 10 mg, Copper 1.5 mg, Selenium 55 mcg, Lutein 2 mg', 'Sebelum / sesudah makan', '8938.jpg', 'Memelihara kesehatan Mata', '-', 'Dos Isi 10 Strip X 10 Tablet', 1, 1, 1),
+(30, 'RETIVIT PLUS KAPLET', 'Beta-carotene 5 mg, vit.C 100 mg, vit.E 60 mg,Zn 10 mg, Copper 1.5 mg, Selenium 55 mcg, Lutein ester 30 mg, Lycopene 2 mg, Zeaxanthin 0.67 mg', 'Sesudah makan', '8939.jpg', 'Memelihara kesehatan dan fungsi mata, sebagai antioksidan', '-', 'Kaplet Salut Selaput 10 X 10', 1, 1, 1),
+(31, 'SANMOL DROPS ', 'Per 0.6 mL : Paracetamol 60 mg', 'Sesudah makan', '1876.jpg', 'Meredakan nyeri termasuk sakit Kepala & sakit Gigi, meredakan Demam yang disebabkan oleh Flu dan paska Imunisasi', '-', 'Botol 15 ml Dalam Dus', 1, 1, 1),
+(32, 'SANMOL SIRUP', 'Tiap 5 ml sirup mengandung: Paracetamol 120 mg', 'Sesudah makan', '1834.jpg', 'Menurunkan demam, meredakan nyeri ringan seperti sakit kepala dan sakit gigi.', '-', 'Botol 60 ml', 1, 1, 1),
+(33, 'SPIRIVA KAPSUL', 'Tiotropium Bromida.', 'Dihirup/inhalasi', '1965.jpg', 'Terapi pemeliharaan untuk PPOK (termasuk Bronkhitis Khronis & Emfisema), terapi pemeliharaan terkait dengan Dispnea & mencegah exaserbasi.', '-', 'Kapsul 18 Mcg X 1 X 10', 1, 1, 1),
+(34, 'SPIRIVA REFILL', 'Tiotropium bromida 18 mcg', 'Dihirup/inhalasi', '17668.jpg', 'Terapi rumat untuk PPOK (termasuk bronkitis kronis dan emfisema), dispnea, dan mencegah eksaserbasi', '-', 'Kapsul 18 Mcg X 1 X 10', 1, 1, 1),
+(35, 'VOMETA DROPS', 'Per mL : Domperidone 5 mg', '15-30 menit sebelum makan dan menjelang tidur malam', '218.jpg', 'Dispepsia/gangguan pencernaan dengan pengosongan lambung lambat, GERD & Esofagitis, Rasa penuh di uluhati & perut, rasa Panas pada uluhati dan kerongkongan, Mual dan Muntah', '-', 'Botol 10 ml Dalam Dus', 1, 1, 1),
+(36, 'VOMETA SIRUP', 'Per ML : Domperidone 5 mg', '15-30 menit sebelum makan dan menjelang tidur malam', '217.jpg', 'Dispepsia/gangguan pencernaan dengan pengosongan lambung lambat, GERD & Esofagitis, Rasa penuh di uluhati & perut, rasa Panas pada uluhati dan kerongkongan, Mual dan Muntah', '-', 'Botol 60 ml Dalam Dus', 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -413,13 +439,13 @@ ALTER TABLE `kegunaan`
 -- AUTO_INCREMENT for table `lasa`
 --
 ALTER TABLE `lasa`
-  MODIFY `kode_lasa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `kode_lasa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `obat`
 --
 ALTER TABLE `obat`
-  MODIFY `kode_obat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `kode_obat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT for table `peringatan`
