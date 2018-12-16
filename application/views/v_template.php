@@ -37,7 +37,7 @@
 
 </body>
 <hr class="featurette-divider">
- <footer class="container">
+ <footer>
         <center><p>&copy; 2018 obatnorum.com</p></center>
       </footer>
 </html>

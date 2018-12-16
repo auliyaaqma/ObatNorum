@@ -105,12 +105,13 @@ input[type=submit]:hover {
 	text-align: center;
 }
 
-.footer {
+footer {
 	padding-top: 20px;
 	padding-bottom: 20px;
 	width: 100%;
 	background: black;
-	text-align:center;
+/*	text-align:center;*/
+	display: inline-block;
 }
 
 .icon{

@@ -99,10 +99,15 @@
 							{
 								echo '-';
 							} else {
-							foreach($list_kegunaan1 as $kegunaan1) 
+								?>
+								<ul>
+							<?php
+							foreach($list_kegunaan1->result() as $kegunaan1) 
 							{
+								?>
 								
-						 			echo $kegunaan1->isi_kegunaan;
+									<li> <?php echo $kegunaan1->isi_kegunaan; ?> </li>
+									<?php
 			      		}
 			  }
 			      ?>
@@ -114,10 +119,15 @@
 							{
 								echo '-';
 							} else {
-							foreach($list_kegunaan2 as $kegunaan2) 
+?>
+								<ul>
+							<?php
+							foreach($list_kegunaan2->result() as $kegunaan2) 
 							{
+								?>
 								
-						 			echo $kegunaan2->isi_kegunaan;
+									<li> <?php echo $kegunaan2->isi_kegunaan; ?> </li>
+									<?php
 			      		}
 			  }
 			      ?>
