@@ -10,6 +10,28 @@
     <!-- Custom styles for this template -->
     <link href="<?php echo base_url('assets/css/carousel.css')?>" rel="stylesheet"> 
 	<link href="<?php echo base_url()?>assets/css/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<head>
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	  <!-- Bootstrap 3.3.7 -->
+			  <link rel="stylesheet" href="<?php echo base_url().'/';?>assets/bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+	  <!-- Font Awesome -->
+			  <link rel="stylesheet" href="<?php echo base_url().'/';?>assets/bower_components/font-awesome/css/font-awesome.min.css">
+	  <!-- Ionicons -->
+			  <link rel="stylesheet" href="<?php echo base_url().'/';?>assets/bower_components/Ionicons/css/ionicons.min.css">
+	  <!-- Theme style -->
+			  <link rel="stylesheet" href="<?php echo base_url().'/';?>assets/dist/css/AdminLTE.css">
+			  <!-- AdminLTE Skins. Choose a skin from the css/skins
+			  folder instead of downloading all of them to reduce the load. -->
+	<!-- SELECT2 -->
+			  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+			  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+
+	<!-- datatables -->
+			  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+			  <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 </head>
 <body>
 	<nav class="navbar navbar-inverse">

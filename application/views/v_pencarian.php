@@ -1,12 +1,6 @@
-<div id="search">
-<!-- <form action="<?php echo base_url().'index.php/Page/Search'?>" method="post" > -->
-	<input type="text" name="keyword" placeholder="Search.."/>
-<!-- 	<input type="submit" value="Search"/> -->
-<!-- </form> -->
-</div>
 <div class="container">
 <h3>Pencarian Obat</h3>
-		<table class="table table-hover table-dark">
+		<table id="example1" class="table table-hover table-dark">
 		  <thead >
 		    <tr>
 		      <th scope="col">Nama Obat</th>
@@ -68,3 +62,9 @@
 		  </tbody>
 		</table>	
 </div>
+
+<script type="text/javascript">
+  $(document).ready( function () {
+    $('#example1').DataTable();
+} );
+</script>
