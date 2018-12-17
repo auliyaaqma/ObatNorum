@@ -12,18 +12,20 @@
 	<link href="<?php echo base_url()?>assets/css/style.css" rel="stylesheet">
 	<head>
 	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	  
 	<!-- datatables -->
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
 	<script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 </head>
 <body>
-	<nav class="navbar navbar-inverse">
+	<nav class="navbar navbar-default">
 	  <div class="container-fluid">
 	  	<div class="navbar-header">
-	      <a class="navbar-brand" href="#">obatnorum.com</a>
+	      <!--<a class="navbar-brand" href="#">obatnorum.com</a>-->
+	      <img class="image-responsive" src="<?php echo base_url('assets/images/ebl-team.png')?>" alt="Generic placeholder image" width="150" height="50"><a href="<?php echo base_url().'index.php/Page/index'?>"></a></img>
 	    </div>
 	    <ul class="nav navbar-nav">
-	      <li><a href="<?php echo base_url().'index.php/Page/index'?>">Beranda</a></li>
+	      <li><a href="<?php echo base_url().'index.php/Page/index'?>" >Beranda</a></li>
 	      <li><a href="<?php echo base_url().'index.php/Page/Pencarian'?>">Pencarian</a></li>
 	      <li><a href="<?php echo base_url().'index.php/Page/NamaObatMirip'?>">Nama Obat Mirip</a></li>
 	      <li><a href="<?php echo base_url().'index.php/Page/RupaObatMirip'?>">Rupa Obat Mirip</a></li>
@@ -31,18 +33,13 @@
 	    </ul>
 	  </div>
 	</nav>
-  	
-
 	<section>
 		<?php $this->load->view($content_view) ?>
 	</section>
-
 <!-- 	<div class="footer">copyright 2018</div> -->
-
-
 </body>
 <hr class="featurette-divider">
- <footer>
+    <footer>
         <center><p>&copy; 2018 obatnorum.com</p></center>
-      </footer>
+    </footer>
 </html>
