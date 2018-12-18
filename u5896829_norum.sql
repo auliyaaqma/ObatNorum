@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 16, 2018 at 06:01 AM
+-- Generation Time: Dec 18, 2018 at 07:14 AM
 -- Server version: 10.1.34-MariaDB
 -- PHP Version: 7.2.7
 
@@ -54,6 +54,18 @@ CREATE TABLE `dosis` (
   `isi_dosis` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `dosis`
+--
+
+INSERT INTO `dosis` (`kode_dosis`, `kode_obat`, `isi_dosis`) VALUES
+(1, 5, 'Dewasa : Awal : 100-300 mg/hari. '),
+(2, 5, 'Pemeliharaan : 200-600 mg/hari. Maksimal : 900 mg/hari.'),
+(3, 5, 'Kondisi ringan : 2-10 mg/kg BB/hari atau 100-200 mg/hari.'),
+(4, 5, 'Kondisi sedang : 300-600 mg/hari.'),
+(5, 5, 'Kondisi berat : 700-900 mg/hari. '),
+(6, 5, ' Anak : 10-20 mg/kg BB/hari');
+
 -- --------------------------------------------------------
 
 --
@@ -65,6 +77,47 @@ CREATE TABLE `efeksamping` (
   `kode_obat` int(11) NOT NULL,
   `isi_efeksamping` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `efeksamping`
+--
+
+INSERT INTO `efeksamping` (`kode_efeksamping`, `kode_obat`, `isi_efeksamping`) VALUES
+(1, 3, 'Adanya ke tidak seimbangan metabolisme'),
+(2, 3, 'Terjadi Hyperammonemia'),
+(3, 3, 'Nitrogen tinggi dalam darah'),
+(4, 3, 'Stupor'),
+(5, 3, 'Terjadi koma pada pasien'),
+(6, 3, 'Bisa mengakibatkan keracunan alumunium'),
+(7, 5, ' sakit perut, mual, dan diare, ruam pada kulit'),
+(8, 6, 'Disfungsi ereksi.'),
+(9, 6, 'Gangguan siklus menstruasi.'),
+(10, 6, 'Keinginan untuk terus bergerak (akathisia).'),
+(11, 6, 'Gangguan pada gerakan otot (distonia).'),
+(12, 6, 'Gerakan tidak terkendali pada lidah, wajah, dan bibir.'),
+(13, 6, 'Berat badan bertambah.'),
+(14, 6, 'Otot kaku.'),
+(15, 6, 'Gejala seperti penyakit Parkinson.'),
+(16, 6, 'Sakit kepala.'),
+(17, 6, 'Sulit tidur.'),
+(18, 6, 'Lemas.'),
+(19, 9, 'Sakit kepala.'),
+(20, 9, 'Nyeri otot dan sendi.'),
+(21, 9, 'Hidung tersumbat.'),
+(22, 9, 'Nyeri perut.'),
+(23, 9, 'Nyeri punggung.'),
+(24, 9, 'Mual dan muntah.'),
+(25, 9, 'Diare'),
+(26, 9, 'Lemas.'),
+(27, 9, 'Anemia.'),
+(28, 9, 'Migrain.'),
+(29, 9, 'Pusing.'),
+(30, 10, 'Nyeri ulu hati.'),
+(31, 10, 'Gangguan pencernaan.'),
+(32, 10, 'Hilang nafsu makan.'),
+(33, 10, 'ual dan muntah.'),
+(34, 10, 'Sakit kepala.'),
+(35, 10, 'Mengantuk dan kelelahan.');
 
 -- --------------------------------------------------------
 
@@ -239,7 +292,9 @@ INSERT INTO `kegunaan` (`kode_kegunaan`, `kode_obat`, `isi_kegunaan`) VALUES
 (17, 9, 'untuk mimisan, hifema atau perdarahan pada mata, perdarahan pasca operasi.'),
 (18, 9, 'hereditary angioedema, yaitu kelainan genetik yang mengakibatkan pembengkakan di bawah kulit.'),
 (19, 10, 'Meredakan rasa sakit dan peradangan'),
-(20, 11, 'Mengobati infeksi bakteri');
+(20, 11, 'Mengobati infeksi bakteri'),
+(21, 21, 'untuk pengobatan penyakit seperti alergi pada saluran pernafasan, kulit dan mata.\r\n'),
+(22, 19, 'mengobati gejala alergi, seperti bersin-bersin, ruam kulit, pilek, hidung tersumbat, dan mata berair akibat paparan alergen\r\n');
 
 -- --------------------------------------------------------
 
@@ -321,9 +376,9 @@ INSERT INTO `obat` (`kode_obat`, `nama_obat`, `kandungan_obat`, `carapenggunaan_
 (16, 'Brainact', 'Citicoline 1000 mg', 'Dapat diberikan sebelum atau sesudah makan', '18311.jpg', 'untuk membantu menangani penurunan kognitif pada usia lanjut', 'BRAINACT TAB 500 MG mengandung Citicolin juga merupakan senyawa kimia otak yang secara alami ada di dalam tubuh manusia. BRAINACT TAB 500 MG berfungsi untuk mengurangi kerusakan jaringan otak saat otak cedera. Selain itu BRAINACT TAB 500 MG juga berfungsi untuk membantu mengobati Alzhaimer (pikun akut), Parkinson (gemetar tanpa terkendali) dan stroke. Hindari penggunaan BRAINACT TAB 500 MG pada ibu hamil dan menyusui.', '1 Dos isi 3 Strip x 10 Tablet', 82, 3, 3),
 (17, 'CardisAN', 'Amlodipine 10 mg', 'Sebelum atau sesudah makan', 'cardisan.jpg', 'Hipertensi, Iskemia Miokardial, Angina.', 'Cardisan  adalah obat yang digunakan untuk pengobatan hipertensi, iskema miokardia dan penyakit arteri koroner. Cardisan Tablet mengandung Amlodipine, obat yang termasuk anti hipertensi golongan calcium channel blockers.', '1 Dos Isi 5 Strip X 10 Tablet', 82, 3, 3),
 (18, 'CardisMO', 'Isosorbide 5-mononitrate 20 mg', 'Sebelum atau sesudah makan', 'cardismo.jpg', 'Terapi jangka panjang Penyakit Jantung Koroner/PJK dan pencegahan Angina Pektoris , terapi tambahan pada Gagal Jantung Kongestif yang tidak respon adekuat terhadap glikosida jantung dan/atau diuretik.', 'CARDISMO mengandung Isosorbid dinitrat merupakan obat untuk membantu mencegah nyeri dada (angina) pada pasien dengan kondisi jantung tertentu (penyakit arteri koroner). CARDISMO bekerja dengan merelaksasikan pembuluh darah sehingga darah dapat mengalir lebih mudah ke jantung.\r\nCARDISMO tidak akan langsung menghilangkan rasa sakit dada setelah terjadi oleh karena itu CARDISMO sebaiknya diminum sebelum aktivitas fisik (seperti olahraga, aktivitas seksual) untuk mencegah nyeri dada.', 'Tablet 20 Mg X 10 X 10', 82, 3, 3),
-(19, 'CLARITIN SIRUP', 'Per-5 mL : Loratadine 5 mg', 'Berikan sesudah makan', '3543.jpg', 'Meredakan gejala2 yang berhubungan dengan Rinitis alergi, mata gatal dan panas, meredakan gejala2 Urtikaria Khronis & gangguan Alergi dermatologis/kulit lainnya.', '-', 'Botol 60 ml', 1, 1, 1),
+(19, 'CLARITIN SIRUP', 'Per-5 mL : Loratadine 5 mg', 'Berikan sesudah makan', '3543.jpg', 'Meredakan gejala2 yang berhubungan dengan Rinitis alergi, mata gatal dan panas, meredakan gejala2 Urtikaria Khronis & gangguan Alergi dermatologis/kulit lainnya.', 'Claritin Syrup adalah obat yang digunakan untuk mengobati berbagai jenis kondisi alergi. Claritin Syrup mengandung Loratadine, obat yang termasuk long acting antihistamin, yang bertindak sebagai inverse agonist selektif histamin perifer H1-reseptor.', 'Botol 60 ml', 1, 1, 1),
 (20, 'CODIPRONT CUM EXPECTORANT ', 'Per 5 mL : Codeine 11.11 mg, phenyltoloxamine 3.67 mg, guaifenesin 55.55 mg, thyme liquid extr 55.55 mg', '-', '15934.jpg', 'Meredakan batuk & membantu pengeluaran dahak dr sal napas pd kondisi alergi, paroksismal, bronkitis akut & kronik.', 'Codipront Cum Expectorant Syrup 60 ml merupakan obat untuk meredakan batuk dan membantu pengeluaran dahak dari saluran pernapasan pada keadaan alergi, paroksismal, serta bronkitis akut dan kronik. Komposisinya terdiri dari Kodein, Feniltoloksamin (nasal dekongestan), Guaifenesin, dan ekstrak thyme cair. Kombinasi tersebut bekerja dengan cara mengurangi batuk dengan penekanan sentral pada pusat batuk, serta mengencerkan dahak pada saluran napas agar mudah dikeluarkan dan bisa melegakan jalur napas.', '-', 1, 1, 1),
-(21, 'CELESTAMINE SIRUP', 'Per 5 mL : Betamethasone 0.25 mg, dexchlorpheniramine maleate 2 mg', 'Sesudah makan', '4828.jpg', 'Alergi pada saluran pernapasan, kulit dan mata', '-', 'Sirup 0.25 Mg/ 5 ml X 60 ml X 1', 1, 1, 1),
+(21, 'CELESTAMINE SIRUP', 'Per 5 mL : Betamethasone 0.25 mg, dexchlorpheniramine maleate 2 mg', 'Sesudah makan', '4828.jpg', 'Alergi pada saluran pernapasan, kulit dan mata', 'Celestamine adalah obat kombinasi yang mengandung kortikosteroid dan antihistamin. Betamethasone mempunyai efek antiinflamasi (antiperadangan) dan antialergi. Sedangkan Dexchlorpheniramine maleate mempunyai efek antihistamin, sebagai obat antialergi dan gatal.\r\n', 'Sirup 0.25 Mg/ 5 ml X 60 ml X 1', 1, 1, 1),
 (22, 'CODIPRONT SIRUP ', 'Codeine 11.11 mg, phenyltoloxamine 3.67 mg.', 'Diberikan bersama makanan', '19045.jpg', 'untuk batuk iritatif (batuk kering/non produktif) yang disebabkan alergi.', '-', 'Botol, 60 ml', 1, 1, 1),
 (23, 'ELKANA SIRUP', 'Per-5 mL : Vit.A 2400 iu, vit.B1 4 mg, vit.B2 1.2 mg, vit.B6 1.2 mg, vit.B12 4 mcg, vit.C 60 mg, vit.D 400 IU, Nicotinamide 16 mg, Choline 12 mg, Inositol 12 mg, Ca 33.1 mg, Na 5.2 mg, L-Lysine HCl 200 mg.', 'Sebelum atau sesudah makan, dapat bersama makanan untuk absorpsi yang lebih baik atau jika timbul ketidak-nyamanan pada saluran cerna.', '1334.jpg', 'Defisiensi vitamin dan mineral', '-', 'Botol 60 ml Dalam Dus', 1, 1, 1),
 (24, 'ELKANA CL SIRUP', 'Vitamin A 2400 IU, vitamin D 400 IU, cod liver oil 8 mg, DHA 10 mg, arachidonic acid (AA) 15 mg, curcuma extrak 12 mg, vitamin B1 4 mg, vitamin B2 1.2 mg, vitamin B6 1.2 mg, vitamin B12 4 mcg, nicotinamide 16 mg, choline 12 mg, inositol 12 mg, L-lysine HCl 100 mg, Ca 33.1 mg, Na 5.2 mg, GOS 500 mg', 'Dapat diberikan bersama makanan agar diabsorpsi lebih baik atau jika timbul rasa tidak nyaman pada GI', '9785.jpg', 'Defisiensi vitamin dan mineral', '-', 'Sirup 120 ml X 1', 1, 1, 1),
@@ -435,13 +490,13 @@ ALTER TABLE `bentuksediaan`
 -- AUTO_INCREMENT for table `dosis`
 --
 ALTER TABLE `dosis`
-  MODIFY `kode_dosis` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `kode_dosis` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `efeksamping`
 --
 ALTER TABLE `efeksamping`
-  MODIFY `kode_efeksamping` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `kode_efeksamping` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT for table `golongan`
@@ -459,7 +514,7 @@ ALTER TABLE `kategori`
 -- AUTO_INCREMENT for table `kegunaan`
 --
 ALTER TABLE `kegunaan`
-  MODIFY `kode_kegunaan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `kode_kegunaan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `lasa`
